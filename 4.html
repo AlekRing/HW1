@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+
+    <style>
+        .root-button {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script> 
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+    <script type="text/babel">
+        const Input = ({ placeholder, className }) => (
+            <input className={className} placeholder={placeholder}/> 
+        );
+
+        Input.propTypes = {
+            placeholder: PropTypes.string,
+            className: PropTypes.string.isRequired
+        };
+
+        const Button = ({ text, className }) => (
+            <button className={className}> 
+                {text}
+            </button>
+        );
+
+        Button.propTypes = {
+            text: PropTypes.string,
+            className: PropTypes.string.isRequired
+        };
+
+        const Root = (
+            <div id='root'>
+                <Input className='root-input' placeholder='hey' />
+                <Button className='root-button' text='click' />
+            </div>
+        );
+
+        ReactDOM.render(Root, document.body);
+    </script>
+</body>
+</html>

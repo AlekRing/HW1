@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+
+    <style>
+        .root-button {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://unpkg.com/react@16.13.1/umd/react.development.js"></script> 
+    <script src="https://unpkg.com/react-dom@16.13.1/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.9.3/babel.js"></script>
+
+    <script type="text/babel">
+        const input = <input key='0' className='root-input' placeholder='hey'></input>
+        const button = <button key='1' className='root-button'>click</button>
+
+        const children = [input, button];
+
+        const id = 'root';
+        const rootElement = <div id={id}>
+                {
+                    children.map(ch => ch)
+                }
+            </div>
+
+        ReactDOM.render(rootElement, document.body);
+    </script>
+
+</body>
+</html>

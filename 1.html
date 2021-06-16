@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        .root-input {
+            background-color: rgb(0, 49, 0);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const rootElem = document.createElement('div');
+
+        rootElem.id = 'root';
+        document.body.append(rootElem);
+
+        console.log('hey')
+
+        const input = document.createElement('input');
+        const button = document.createElement('button');
+
+        input.classList = 'root-input';
+        input.placeholder = 'hey';
+
+        button.classList = 'root-button';
+        button.textContent = 'click';
+
+        rootElem.append(input, button);
+    </script>
+</body>
+</html>
