@@ -1,0 +1,12 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.input:focus {
+  outline: 1px solid red;
+}
+
+.btn-focus {
+  margin-top: 1rem;
+}
